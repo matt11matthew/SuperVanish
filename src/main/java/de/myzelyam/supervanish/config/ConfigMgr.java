@@ -70,12 +70,12 @@ public class ConfigMgr {
                 boolean isDismissed = playerData.getBoolean("PlayerData.CONSOLE.dismissed."
                         + currentVersion.replace(".", "_"), false);
                 if (!isDismissed) plugin.log(Level.WARNING, "At least one config file is outdated, " +
-                        "it's recommended to regenerate it using '/sv recreatefiles'");
+                        "it's recommended to regenerate it using '/v recreatefiles'");
             }
             if (currentSettingsVersion.startsWith("1.5.") || currentSettingsVersion.startsWith("1.4.")) {
                 Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "You have a very outdated " +
                         "config file, your settings will not work until you regenerate your SV-files " +
-                        "using /sv recreatefiles");
+                        "using /v recreatefiles");
             }
         } catch (Exception e) {
             plugin.logException(e);

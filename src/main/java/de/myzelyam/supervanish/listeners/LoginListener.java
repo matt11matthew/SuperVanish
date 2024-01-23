@@ -41,7 +41,7 @@ public class LoginListener implements Listener {
                     && !CommandAction.VANISH_SELF.checkPermission(p, plugin)) {
                 vanished = false;
             }
-            if (!vanished && p.hasPermission("sv.joinvanished")
+            if (!vanished && p.hasPermission("v.joinvanished")
                     && plugin.getSettings().getBoolean("VanishStateFeatures.AutoVanishOnJoin", false)) {
                 plugin.getVanishStateMgr().setVanishedState(p.getUniqueId(), p.getName(), true, null);
                 vanished = true;

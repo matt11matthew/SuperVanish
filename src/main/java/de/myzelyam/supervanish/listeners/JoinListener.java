@@ -69,7 +69,7 @@ public class JoinListener implements EventExecutor, Listener {
                 }
                 // not necessarily vanished:
                 // recreate files msg
-                if ((p.hasPermission("sv.recreatecfg") || p.hasPermission("sv.recreatefiles"))
+                if ((p.hasPermission("v.recreatecfg") || p.hasPermission("v.recreatefiles"))
                         && (plugin.getConfigMgr().isSettingsUpdateRequired()
                         || plugin.getConfigMgr().isMessagesUpdateRequired())) {
                     String currentVersion = plugin.getDescription().getVersion();

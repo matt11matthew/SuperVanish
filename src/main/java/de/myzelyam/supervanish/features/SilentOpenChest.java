@@ -145,7 +145,7 @@ public class SilentOpenChest extends Feature {
     public void onChestInteract(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         if (!plugin.getVanishStateMgr().isVanished(p.getUniqueId())
-                || !p.hasPermission("sv.silentchest")) return;
+                || !p.hasPermission("v.silentchest")) return;
         if (e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         if (p.getGameMode() == GameMode.SPECTATOR) return;
         // Remember to keep "p.getItemInHand() != null" as we can't ensure that older Spigot versions will always return a non-null value

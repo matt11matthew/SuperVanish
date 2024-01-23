@@ -73,7 +73,7 @@ public class UpdateNotifier {
     }
 
     private void notifyPlayer(Player p) {
-        if (p.hasPermission("sv.notify") && latestVersion != null) {
+        if (p.hasPermission("v.notify") && latestVersion != null) {
             if (notifiedPlayers.contains(p.getUniqueId())) return;
             notifiedPlayers.add(p.getUniqueId());
             plugin.sendMessage(p,

@@ -41,7 +41,7 @@ public class GeneralListener implements Listener {
             Player p = (Player) e.getDamager();
             if (plugin.getVanishStateMgr().isVanished(p.getUniqueId())) {
                 if (config.getBoolean("RestrictiveOptions.PreventHittingEntities")
-                        && !p.hasPermission("sv.damageentities") && !p.hasPermission("sv.damage")) {
+                        && !p.hasPermission("v.damageentities") && !p.hasPermission("v.damage")) {
                     plugin.sendMessage(p, "EntityHitDenied", p);
                     e.setCancelled(true);
                 }
@@ -116,7 +116,7 @@ public class GeneralListener implements Listener {
             if (!vanishPlayer.hasItemPickUpsEnabled())
                 e.setCancelled(true);
             if (plugin.getSettings().getBoolean("RestrictiveOptions.PreventModifyingOwnInventory")
-                    && !vanishPlayer.getPlayer().hasPermission("sv.modifyowninv")) {
+                    && !vanishPlayer.getPlayer().hasPermission("v.modifyowninv")) {
                 e.setCancelled(true);
             }
         } catch (Exception er) {

@@ -1,4 +1,4 @@
-name: SuperVanish
+name: Vanish
 main: de.myzelyam.supervanish.SuperVanish
 author: MyzelYam
 description: Advanced /vanish plugin which makes other players think that you're not on the server
@@ -18,43 +18,43 @@ softdepend:
 - MVdWPlaceholderAPI
 - Vault
 commands:
-  sv:
-    usage: /sv
+  v:
+    usage: /v
     description: SuperVanish's main command
     aliases: [supervanish, v, vanish]
 permissions:
-  sv.*:
+  v.*:
     children:
-      sv.use: true
-      sv.see: true
-      sv.reload: true
-      sv.logout: true
-      sv.login: true
-      sv.others: true
-      sv.list: true
-      sv.keepfly: true
-      sv.toggleitems: true
-      sv.recreatefiles: true
-      sv.notoggle: true
-      sv.joinvanished: true
-      sv.notify: true
-      sv.breakblocks: true
-      sv.placeblocks: true
-      sv.damage: true
-      sv.stacktrace: true
-      sv.silentchest: true
+      v.use: true
+      v.see: true
+      v.reload: true
+      v.logout: true
+      v.login: true
+      v.others: true
+      v.list: true
+      v.keepfly: true
+      v.toggleitems: true
+      v.recreatefiles: true
+      v.notoggle: true
+      v.joinvanished: true
+      v.notify: true
+      v.breakblocks: true
+      v.placeblocks: true
+      v.damage: true
+      v.stacktrace: true
+      v.silentchest: true
     description: Grants you all SuperVanish permissions
   supervanish.*:
     children:
-      sv.*: true
+      v.*: true
     description: Grants you all SuperVanish permissions
-  sv.see:
+  v.see:
     description: You can see other vanished players
-  sv.notoggle:
+  v.notoggle:
     description: Other players cannot hide/show you if you're online
-  sv.keepfly:
+  v.keepfly:
     description: You can always keep flying when you reappear
-  sv.joinvanished:
+  v.joinvanished:
     description: You always join vanished (must be enabled in config)
-  sv.silentchest:
+  v.silentchest:
     description: You can open chests silently

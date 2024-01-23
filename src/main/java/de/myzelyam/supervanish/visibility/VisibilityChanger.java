@@ -144,7 +144,7 @@ public class VisibilityChanger {
             // fly
             // remove fly if not spectator or creative and no perm
             if (config.getBoolean("InvisibilityFeatures.Fly.DisableOnReappear")
-                    && !player.hasPermission("sv.keepfly")
+                    && !player.hasPermission("v.keepfly")
                     && (player.getGameMode() == GameMode.SURVIVAL
                     || player.getGameMode() == GameMode.ADVENTURE)
                     && config.getBoolean("InvisibilityFeatures.Fly.Enable")) {

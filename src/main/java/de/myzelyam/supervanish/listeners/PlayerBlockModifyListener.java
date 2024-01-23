@@ -59,7 +59,7 @@ public class PlayerBlockModifyListener implements Listener {
             if (plugin.getSettings().getBoolean("RestrictiveOptions.PreventBlockPlacing")) {
                 Player p = e.getPlayer();
                 Collection<UUID> vanishedPlayers = plugin.getVanishStateMgr().getOnlineVanishedPlayers();
-                if (vanishedPlayers.contains(p.getUniqueId()) && !p.hasPermission("sv.placeblocks")) {
+                if (vanishedPlayers.contains(p.getUniqueId()) && !p.hasPermission("v.placeblocks")) {
                     e.setCancelled(true);
                     plugin.sendMessage(e.getPlayer(), "BlockPlaceDenied", e.getPlayer());
                 }
@@ -74,7 +74,7 @@ public class PlayerBlockModifyListener implements Listener {
         try {
             if (plugin.getSettings().getBoolean("RestrictiveOptions.PreventBlockBreaking")) {
                 Player p = e.getPlayer();
-                if (plugin.getVanishStateMgr().isVanished(p.getUniqueId()) && !p.hasPermission("sv.breakblocks")) {
+                if (plugin.getVanishStateMgr().isVanished(p.getUniqueId()) && !p.hasPermission("v.breakblocks")) {
                     e.setCancelled(true);
                     plugin.sendMessage(e.getPlayer(), "BlockBreakDenied", e.getPlayer());
                 }

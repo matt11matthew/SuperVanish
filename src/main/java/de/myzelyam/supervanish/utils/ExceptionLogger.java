@@ -21,7 +21,7 @@ public class ExceptionLogger {
             if (plugin.getConfigMgr().isSettingsUpdateRequired()
                     || plugin.getConfigMgr().isMessagesUpdateRequired()) {
                 if (realEx) plugin.log(loggingLevel, "You have an outdated configuration, " +
-                        "regenerating it by using '/sv recreatefiles' might fix this problem!");
+                        "regenerating it by using '/v recreatefiles' might fix this problem!");
                 else plugin.log(loggingLevel, "Configuration is outdated.");
             } else if (realEx) plugin.log(loggingLevel, "Please report this issue!");
             if (!realEx) e = new RuntimeException("Information for reporting an issue");
@@ -59,7 +59,7 @@ public class ExceptionLogger {
                 if (plugin.getConfigMgr().isSettingsUpdateRequired()
                         || plugin.getConfigMgr().isMessagesUpdateRequired())
                     plugin.log(loggingLevel, "You have an outdated configuration, " +
-                            "regenerating it by using '/sv recreatefiles' might fix this problem!");
+                            "regenerating it by using '/v recreatefiles' might fix this problem!");
                 plugin.log(loggingLevel, "Please include this information");
                 plugin.log(loggingLevel, "if you report the issue.");
             } else
