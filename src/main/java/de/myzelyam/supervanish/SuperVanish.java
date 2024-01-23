@@ -84,7 +84,7 @@ public class SuperVanish extends JavaPlugin implements SuperVanishPlugin {
         try {
             useProtocolLib = getServer().getPluginManager().isPluginEnabled("ProtocolLib");
             if (!useProtocolLib) log(Level.INFO,
-                    "Please install ProtocolLib to be able to use all SuperVanish features: " +
+                    "Please install ProtocolLib to be able to use all Vanish features: " +
                             "https://www.spigotmc.org/resources/protocollib.1997/");
             configMgr = new ConfigMgr(this);
             configMgr.prepareFiles();
@@ -123,7 +123,7 @@ public class SuperVanish extends JavaPlugin implements SuperVanishPlugin {
             vanishPlayers.clear();
             VanishAPI.setPlugin(null);
         } catch (Throwable e) {
-            if (e instanceof ThreadDeath || e instanceof VirtualMachineError) throw e;
+            if (e instanceof VirtualMachineError) throw e;
             if (!(e instanceof NoClassDefFoundError | e instanceof NoSuchMethodError)) {
                 e.printStackTrace();
             }

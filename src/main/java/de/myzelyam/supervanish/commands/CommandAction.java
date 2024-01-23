@@ -22,9 +22,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum CommandAction {
     VANISH_SELF(
-            "sv.use",
+            "v.use",
             false,
-            "/sv [on|off]",
+            "/v [on|off]",
             "Toggles your visibility") {
         @Override
         public boolean checkPermission(CommandSender sender, SuperVanish plugin) {
@@ -33,29 +33,29 @@ public enum CommandAction {
         }
     },
     VANISH_OTHER(
-            "sv.others",
+            "v.others",
             true,
-            "/sv [on|off] <player>",
+            "/v [on|off] <player>",
             "Shows or hides a player"),
     VANISHED_LIST(
-            "sv.list",
+            "v.list",
             true,
-            "/sv list",
+            "/v list",
             "Shows a list of vanished players"),
     BROADCAST_LOGIN(
-            "sv.login",
+            "v.login",
             false,
-            "/sv login",
+            "/v login",
             "Broadcasts a fake login message"),
     BROADCAST_LOGOUT(
-            "sv.logout",
+            "v.logout",
             false,
-            "/sv logout",
+            "/v logout",
             "Broadcasts a fake logout message"),
     TOGGLE_ITEM_PICKUPS(
-            "sv.toggleitems",
+            "v.toggleitems",
             false,
-            "/sv tipu",
+            "/v tipu",
             "Toggles picking up items") {
         @Override
         public boolean checkPermission(CommandSender sender, SuperVanish plugin) {
@@ -63,9 +63,9 @@ public enum CommandAction {
         }
     },
     RECREATE_FILES(
-            "sv.recreatefiles",
+            "v.recreatefiles",
             true,
-            "/sv recreatefiles",
+            "/v recreatefiles",
             "Recreates the config") {
         @Override
         public boolean checkPermission(CommandSender sender, SuperVanish plugin) {
@@ -73,19 +73,19 @@ public enum CommandAction {
         }
     },
     RELOAD(
-            "sv.reload",
+            "v.reload",
             true,
-            "/sv reload",
+            "/v reload",
             "Reloads all settings and messages"),
     PRINT_STACKTRACE(
-            "sv.stacktrace",
+            "v.stacktrace",
             true,
-            "/sv stacktrace",
+            "/v stacktrace",
             "Logs info for a bug report"),
     SHOW_HELP(
-            "sv.help",
+            "v.help",
             true,
-            "/sv help",
+            "/v help",
             "Shows this help page");
 
     /**

@@ -54,7 +54,7 @@ public class PlaceholderAPIHook extends PluginHook {
 
         @Override
         public String getIdentifier() {
-            return "supervanish";
+            return "vanish";
         }
 
         @Override

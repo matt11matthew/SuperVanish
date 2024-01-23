@@ -37,7 +37,7 @@ public class MVdWPlaceholderAPIHook extends PluginHook {
 
     @Override
     public void onPluginEnable(Plugin plugin) {
-        PlaceholderAPI.registerPlaceholder(superVanish, "supervanish_isvanished",
+        PlaceholderAPI.registerPlaceholder(superVanish, "vanish_isvanished",
                 e -> {
                     try {
                         Player p = e.getPlayer();
@@ -56,7 +56,7 @@ public class MVdWPlaceholderAPIHook extends PluginHook {
                         return no;
                     }
                 });
-        PlaceholderAPI.registerPlaceholder(superVanish, "supervanish_vanishprefix",
+        PlaceholderAPI.registerPlaceholder(superVanish, "vanish_vanishprefix",
                 e -> {
                     try {
                         Player p = e.getPlayer();
@@ -74,7 +74,7 @@ public class MVdWPlaceholderAPIHook extends PluginHook {
                         return "";
                     }
                 });
-        PlaceholderAPI.registerPlaceholder(superVanish, "supervanish_vanishsuffix",
+        PlaceholderAPI.registerPlaceholder(superVanish, "vanish_vanishsuffix",
                 e -> {
                     try {
                         Player p = e.getPlayer();
@@ -92,7 +92,7 @@ public class MVdWPlaceholderAPIHook extends PluginHook {
                         return "";
                     }
                 });
-        PlaceholderAPI.registerPlaceholder(superVanish, "supervanish_vanishedplayers",
+        PlaceholderAPI.registerPlaceholder(superVanish, "vanish_vanishedplayers",
                 e -> {
                     try {
                         Player p = e.getPlayer();
@@ -119,7 +119,7 @@ public class MVdWPlaceholderAPIHook extends PluginHook {
                         return "";
                     }
                 });
-        PlaceholderAPI.registerPlaceholder(superVanish, "supervanish_playercount",
+        PlaceholderAPI.registerPlaceholder(superVanish, "vanish_playercount",
                 e -> {
                     try {
                         Player p = e.getPlayer();
